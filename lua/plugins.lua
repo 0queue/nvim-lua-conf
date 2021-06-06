@@ -30,4 +30,6 @@ vim.cmd 'autocmd BufWritePost plugins.lua PackerCompile'
 return require('packer').startup(function ()
   use 'wbthomason/packer.nvim'
   use 'airblade/vim-gitgutter'
+  --use 'shaunsingh/seoul256.nvim'
+  use { '0queue/seoul256.nvim', branch = 'status-line-fix' }
 end)

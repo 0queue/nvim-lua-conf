@@ -1,6 +1,13 @@
 require('plugins')
 
+-- colors
 vim.o.termguicolors = true
+require('seoul256').set()
+
+-- for tab completion when picking files for example
+vim.o.wildmode = 'longest:full,full'
+vim.o.wildmenu = true
+
 
 vim.wo.number = true
 vim.o.ruler = true

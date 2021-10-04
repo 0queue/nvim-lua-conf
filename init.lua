@@ -1,7 +1,9 @@
 require('plugins')
 
 -- colors
-require('seoul256').set()
+require('github-theme').setup({
+    theme_style = 'dark'
+})
 
 -- lsp
 local lspconfig = require('lspconfig')

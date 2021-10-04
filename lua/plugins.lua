@@ -30,7 +30,7 @@ vim.cmd 'autocmd BufWritePost plugins.lua PackerCompile'
 return require('packer').startup(function ()
   use 'wbthomason/packer.nvim'
   use 'airblade/vim-gitgutter'
-  use 'shaunsingh/seoul256.nvim'
   use 'neovim/nvim-lspconfig'
   use 'simrat39/rust-tools.nvim'
+  use 'projekt0n/github-nvim-theme'
 end)

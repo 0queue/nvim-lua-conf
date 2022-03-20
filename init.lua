@@ -41,25 +41,10 @@ vim.api.nvim_set_keymap('t', '<Esc>', '<C-\\><C-n>', noremap)
 
 vim.api.nvim_command('autocmd FileType wast,wat setlocal shiftwidth=2')
 
-lspconfig.rust_analyzer.setup({
-    on_attach = function(client, bufnr)
-        vim.api.nvim_buf_set_option(bufnr, 'omnifunc', 'v:lua.vim.lsp.omnifunc')
-    end,
-    settings = {
-        ["rust-analyzer"] = {
-            assist = {
-                importGranularity = "item"
-            },
-            procMacro = {
-                enable = true
-            }
-        }
-    }
-})
-
 rust_tools.setup({
-    tools = {
-        autoSetHints = true,
-        hover_with_actions = true,
+    server = {
+        on_attach = function(client, bufnr)
+            vim.api.nvim_buf_set_option(bufnr, 'omnifunc', 'v:lua.vim.lsp.omnifunc')
+        end
     }
 })
